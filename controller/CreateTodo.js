@@ -1,6 +1,8 @@
+//import scheema
 const Todo=require("../models/Todo");
 
-exports.CreateTodo= async(req,res)=>{
+//define route handler
+exports.createTodo= async(req,res)=>{
     try{
         const{title, description}=req.body;
         const response= await Todo.create({title, description});
@@ -24,3 +26,4 @@ exports.CreateTodo= async(req,res)=>{
 
 
 }
+
